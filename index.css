@@ -34,7 +34,7 @@ h1, h2, h3 {
 	height: 800px;
 	width: 580px;
 	position: absolute;
-	bottom: 210px;
+	bottom: 220px;
 	overflow: hidden;
 	margin: 0 auto;
 	left: 0;
@@ -44,10 +44,10 @@ h1, h2, h3 {
 #vid {
 	width: 480px;
 	position: absolute;
-	bottom: 140px;
+	left: 40px;
+	bottom: 160px;
 	overflow: hidden;
 	margin: 0 auto;
-	left: 0;
 	right: 0;
 }
 
@@ -104,6 +104,12 @@ h1, h2, h3 {
 	width: 575px;
 }
 
+.carousel-container {
+    width: 495px !important;
+    padding-left: 80px;
+  	padding-top: 60px;
+}
+
 .carousel>.carousel-inner>.item>.circleElement {
     background-color: #000;
     border-radius: 50%;
@@ -125,10 +131,9 @@ h1, h2, h3 {
     width: 60px;
     height: 0;
     font-size: 100px;
-    background: none;
+    background: transparent;
     border: none;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
+    padding-top: 50px;
 }
 .carousel-indicators li {
     background-color: #999;
@@ -150,7 +155,11 @@ h1, h2, h3 {
 }
 .carousel-fade .carousel-inner .next.left,
 .carousel-fade .carousel-inner .prev.right { opacity: 1 }
-.carousel-fade .carousel-control { z-index: 2 }
+.carousel-fade .carousel-control 
+	{ 
+	background: none;
+	z-index: 2
+	}
 @media only screen and (max-width:767px) { 
     h1 { font-size: 30px !important }
     .carousel-caption {
@@ -167,9 +176,4 @@ h1, h2, h3 {
     .carousel { margin-bottom: 0 }
     .hero-unit { padding-bottom: 60px }
     .hero-unit p { font-size: 16px }
-}
-.carousel-container {
-    width: 90% !important;
-    padding-left: 75px;
-  	padding-top: 58px;
 }
