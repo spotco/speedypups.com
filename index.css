@@ -1,0 +1,175 @@
+body {
+	font-family: "Futura";
+	font-size: 20px;
+}
+
+h1, h2, h3 {
+	font-family: "Carton Six";
+}
+
+@font-face {
+	font-family: "Futura";
+	src: url("fonts/FuturaStd-Condensed.ttf");
+}
+
+@font-face {
+	font-family: "Carton Six";
+	src: url("fonts/Carton_Six.ttf");
+}
+
+#main_bg {
+	background-image: url("images/light_tan_bg.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#main_slider_section {
+	background-image: url("images/top_bg.png");
+	height: 1050px;
+	position: relative;
+}
+
+#main_slider_background {
+	background-image: url("images/main_slider_bg.png");
+	height: 800px;
+	width: 580px;
+	position: absolute;
+	bottom: 210px;
+	overflow: hidden;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+#vid {
+	width: 480px;
+	position: absolute;
+	bottom: 140px;
+	overflow: hidden;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+#features {
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+#screenshots {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-image: url("images/dark_tan_bg.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: auto;
+}
+
+#social {
+	padding-top: 50px;
+	padding-bottom: 0px;
+}
+
+#social img {
+	text-align: center;
+	width: 100%;
+}
+
+#social .icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: inline-block;    
+}
+
+#producers {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	background-image: url("images/dark_tan_half_bg.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: auto;
+}
+
+#producers p,h3 {
+	display: inline-block;
+	margin: 10px;
+}
+
+.slider_background {
+	background-image: url("images/slider_bg.png");
+	height: 360px;
+	width: 575px;
+}
+
+.carousel>.carousel-inner>.item>.circleElement {
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 11%;
+    left: 39%;
+    width: 400px;
+    height: 400px;
+    opacity: .5;
+}
+.carousel-indicators {
+    top: 35px;
+    background: #404549;
+    padding: 30px;
+    border-radius: 10px;
+}
+.carousel-indicators li { cursor: pointer }
+.carousel-control {
+    width: 60px;
+    height: 0;
+    font-size: 100px;
+    background: none;
+    border: none;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+.carousel-indicators li {
+    background-color: #999;
+    background-color: rgba(255,255,255,0.3);
+}
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active { opacity: 1 }
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right { opacity: 1 }
+.carousel-fade .carousel-control { z-index: 2 }
+@media only screen and (max-width:767px) { 
+    h1 { font-size: 30px !important }
+    .carousel-caption {
+        padding: 15px;
+        text-align: center;
+    }
+    .carousel-caption h4 { font-size: 30px }
+    .carousel-caption p {
+        margin-top: 10px;
+        font-size: 10px;
+        margin-bottom: -10px;
+    }
+    body { padding: 0 !important }
+    .carousel { margin-bottom: 0 }
+    .hero-unit { padding-bottom: 60px }
+    .hero-unit p { font-size: 16px }
+}
+.carousel-container {
+    width: 90% !important;
+    padding-left: 75px;
+  	padding-top: 58px;
+}
