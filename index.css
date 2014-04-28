@@ -1,5 +1,4 @@
 body {
-	overflow: hidden;
 	font-family: "Futura";
 	font-size: 20px;
 	background-color: #d5b597;
@@ -26,23 +25,26 @@ h1, h2, h3 {
 }
 
 #main_slider_section {
-	background-image: url("images/top_bg.png");
-	height: 1050px;
+	background: url("images/top_bg.png") bottom repeat-x;
+    padding-bottom: 215px;
 }
 
-#main_slider img {
-    display: block;
+#main_slider_bg_img {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    bottom: 220px;
 }
 
 #main_slider {
-    height: 1050px;
     position: relative;
 }
+
+#vid iframe {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    width: 75%;
+    height: 22%;
+    bottom: 21%;
+}   
 
 #features {
 	padding-top: 80px;
