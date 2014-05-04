@@ -18,10 +18,31 @@ h1, h2, h3 {
 	src: url("fonts/Carton_Six.ttf");
 }
 
+#test_flight_form {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    height: 22%;
+    bottom: 35.5%;
+}
+
+#app_store_logo {
+    position: absolute;
+    left: 37.5%;
+    width: 24%;
+    bottom: 6.25%;
+}
+
+#test_flight_form input {
+    width: 60%;
+    margin-left: 10%;
+}
+
 #main_bg {
 	background-image: url("images/light_tan_bg.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+    margin-top: -15px;
 }
 
 #main_slider_section {
@@ -51,6 +72,28 @@ h1, h2, h3 {
 	padding-bottom: 50px;
 }
 
+#features #rocket_pup {
+    margin-left: -30px;
+    margin-top: -50px;
+    width: 150px;
+    height: 100px;
+    float: left;   
+}
+
+#features #purple_pup {
+    float: right;
+    margin-top: -30px;
+    margin-right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+#features #three_prints {
+    position: absolute;
+    top: -10px;
+    right: -30px;
+}
+
 #screenshots {
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -58,6 +101,12 @@ h1, h2, h3 {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: auto;
+}
+
+#screenshots #two_prints {
+    position: absolute;
+    top: -30px;
+    left: -30px;
 }
 
 #social {
@@ -77,6 +126,18 @@ h1, h2, h3 {
     margin-right: 25px;
     margin-bottom: 25px;
     display: inline-block;    
+}
+
+#social a img {
+    -webkit-transition: all .05s ease-in-out;
+}
+    
+#social a:hover img {
+    -webkit-transform: scale(1.5);
+}
+
+#social a:active img {
+    -webkit-transform: scale(1);
 }
 
 #producers {
