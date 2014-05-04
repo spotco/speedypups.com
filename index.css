@@ -51,8 +51,19 @@ h1, h2, h3 {
 }
 
 #test_flight_form input {
-    width: 60%;
-    margin-left: 10%;
+    position: absolute;
+    top: 5.5%;
+    width: 90%;
+    height: 16%;
+    right: -28%;
+}
+
+#testflight_logo {
+    position: absolute;
+    top: 6%;
+    left: 25%;
+    height: 16%;
+    width: 11%;
 }
 
 #main_bg {
