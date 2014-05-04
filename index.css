@@ -98,6 +98,7 @@ h1, h2, h3 {
 #features {
 	padding-top: 80px;
 	padding-bottom: 80px;
+    overflow: hidden;
 }
 
 #features #rocket_pup {
@@ -327,7 +328,14 @@ h1, h2, h3 {
 #screenshots #happy_pup {
     position: absolute;
     top: -50px;
-    right: 10px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+}
+#features #purple_pup {
+    position: absolute;
+    bottom: -70px;
+    right: 30px;
     width: 80px;
     height: 80px;
 }
