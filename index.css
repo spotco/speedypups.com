@@ -86,14 +86,14 @@ h1, h2, h3 {
 
 #features {
 	padding-top: 80px;
-	padding-bottom: 50px;
+	padding-bottom: 80px;
 }
 
 #features #rocket_pup {
-    left: -30px;
+    left: -20px;
     top: -50px;
-    width: 150px;
-    height: 100px;
+    width: 25%;
+    height: 30%;
     position: absolute;
 }
 
@@ -107,10 +107,10 @@ h1, h2, h3 {
 
 #features #purple_pup {
     position: absolute;
-    bottom: -60px;
-    right: -20px;
-    width: 100px;
-    height: 100px;
+    bottom: -70px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
 }
 
 #features #three_prints {
