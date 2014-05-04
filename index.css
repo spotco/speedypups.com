@@ -138,8 +138,8 @@ h1, h2, h3 {
 
 #screenshots #robot_pups {
     position: absolute;
-    bottom: -25px;
-    right: -10px;
+    bottom: -35px;
+    right: -5px;
     width: 22%;
     height: 34%;
     z-index: -500px;
