@@ -26,11 +26,20 @@ h1, h2, h3 {
        url('fonts/carton_six.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+#main_logo img {
+    width: 100%;
+}
+
+#main_billboard {
+    
+}
+
 #test_flight_form {
     position: absolute;
     left: 12%;
     right: 12%;
     height: 22%;
+    width: 50%;
     bottom: 35.5%;
 }
 
@@ -81,17 +90,25 @@ h1, h2, h3 {
 }
 
 #features #rocket_pup {
-    margin-left: -30px;
-    margin-top: -50px;
+    left: -30px;
+    top: -50px;
     width: 150px;
     height: 100px;
-    float: left;   
+    position: absolute;
+}
+
+#features #rocket_pup_shadow {
+    left: -10px;
+    bottom: -10px;
+    width: 100px;
+    height: 20px;
+    position: absolute;
 }
 
 #features #purple_pup {
-    float: right;
-    margin-top: -30px;
-    margin-right: -60px;
+    position: absolute;
+    bottom: -60px;
+    right: -20px;
     width: 100px;
     height: 100px;
 }
@@ -109,12 +126,31 @@ h1, h2, h3 {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: auto;
+    position: relative;
+    z-index: 500px;
 }
 
 #screenshots #two_prints {
     position: absolute;
     top: -30px;
     left: -30px;
+}
+
+#screenshots #robot_pups {
+    position: absolute;
+    bottom: -20px;
+    right: -0px;
+    width: 90px;
+    height: 90px;
+    z-index: -500px;
+}
+
+#screenshots #sleeping_pup {
+    position: absolute;
+    bottom: -10px;
+    left: -15px;
+    width: 85px;
+    height: 85px;
 }
 
 #social {
@@ -162,15 +198,22 @@ h1, h2, h3 {
 	margin: 10px;
 }
 
-.slider_background {
-	background-image: url("images/slider_bg.png");
+.slider_background_tan {
+	background-image: url("images/slider_tan_bg.png");
+}
+
+.slider_background_brown {
+	background-image: url("images/slider_brown_bg.png");
+}
+
+.slider_background_tan, .slider_background_brown {
     width: 100%; /*whatever width you want*/
     display: inline-block;
     position: relative;
 	background-size: 100% 100%;
 }
 
-.slider_background:after {
+.slider_background_tan:after, .slider_background_brown:after {
     padding-top: 56.25%; /*16:9 ratio*/
     display: block;
     content: '';
