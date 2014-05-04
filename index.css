@@ -291,5 +291,16 @@ h1, h2, h3 {
     body { padding: 0 !important }
     .carousel { margin-bottom: 0 }
     .hero-unit { padding-bottom: 60px }
-    .hero-unit p { font-size: 16px }
+    .hero-unit p { font-size: 16px 
+    }    
+    
+#main_bg {
+	background-color: #d5b597;
+    background-image: none;
+}
+        
+#producers, #screenshots {
+    background-color: #f9e6d2;
+    background-image: none;
+}
 }
