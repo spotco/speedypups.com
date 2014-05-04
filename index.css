@@ -91,7 +91,7 @@ h1, h2, h3 {
 
 #features #rocket_pup {
     left: -20px;
-    top: -50px;
+    top: -30px;
     width: 25%;
     height: 30%;
     position: absolute;
@@ -100,8 +100,8 @@ h1, h2, h3 {
 #features #rocket_pup_shadow {
     left: -10px;
     bottom: -10px;
-    width: 100px;
-    height: 20px;
+    width: 25%;
+    height: 5%;
     position: absolute;
 }
 
@@ -138,19 +138,19 @@ h1, h2, h3 {
 
 #screenshots #robot_pups {
     position: absolute;
-    bottom: -20px;
-    right: -0px;
-    width: 90px;
-    height: 90px;
+    bottom: -25px;
+    right: -10px;
+    width: 22%;
+    height: 34%;
     z-index: -500px;
 }
 
 #screenshots #sleeping_pup {
     position: absolute;
     bottom: -10px;
-    left: -15px;
-    width: 85px;
-    height: 85px;
+    left: -5px;
+    width: 18%;
+    height: 30%;
 }
 
 #social {
