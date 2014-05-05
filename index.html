@@ -7,75 +7,67 @@
         
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="index.css" rel="stylesheet" type="text/css">
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"> </script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         
         <script type="text/javascript">
+            var _CAROUSEL = {
+                "features":{
+                    "1":"Frantic, fun and fast platform-y goodness!",
+                    "2":"Run, jump and dash your way through dozens of levels and three gorgeously animated worlds!",
+                    "3":"Multiple different unlockable characters with special powers!",
+                    "4":"Battle devious bosses!",
+                    "5":"Like Flappy Birds? More like Flappy Pups!",
+                    "6":"Need a little more DIFFICULTY in your life? Try the CHALLENGE mode! "
+                },
+                "screenshots":{
+                    "1":"Things aren't gonna end well for our little pup here...",
+                    "2":"Gotta go fast!",
+                    "3":"Gravity's not a problem when you're THIS cute...",
+                    "4":"Don't try this at home!",
+                    "5":"Home sweet home...",     
+                    "6":"Buy somethin', will ya?"
+                }
+            }
 
 
+            $(document).ready(function() {
+                $('#features_carousel').on('slid.bs.carousel', function () {
+                var cmpv = $("#features_carousel .active").attr("data-slide-no");
+                if (_CAROUSEL["features"][cmpv]) {
+                    $("#features_text").text(_CAROUSEL["features"][cmpv]);
+                }
+                })
 
+                $('#screenshots_carousel').on('slid.bs.carousel', function () {
+                var cmpv = $("#screenshots_carousel .active").attr("data-slide-no");
+                if (_CAROUSEL["screenshots"][cmpv]) {
+                    $("#screenshots_text").text(_CAROUSEL["screenshots"][cmpv]);
+                }
+                })
 
+                $("#features_carousel").carousel({
+                    interval: 10000
+                });
+                $("#screenshots_carousel").carousel({
+                    interval: 10000
+                });
+                /*
+                $(".carousel").on("slid", function() {
+                    var to_slide;
+                    to_slide = $(".carousel-item.active").attr("data-slide-no");
+                    $(".myCarousel-target.active").removeClass("active");
+                    $(".carousel-indicators [data-slide-to=" + to_slide + "]").addClass("active");
+                });
 
-
-
-var _CAROUSEL = {
-	"features":{
-		"1":"Frantic, fun and fast platform-y goodness!",
-		"2":"Run, jump and dash your way through dozens of levels and three gorgeously animated worlds!",
-		"3":"Multiple different unlockable characters with special powers!",
-		"4":"Battle devious bosses!",
-		"5":"Like Flappy Birds? More like Flappy Pups!",
-		"6":"Need a little more DIFFICULTY in your life? Try the CHALLENGE mode! "
-	},
-	"screenshots":{
-		"1":"Things aren't gonna end well for our little pup here...",
-		"2":"Gotta go fast!",
-		"3":"Gravity's not a problem when you're THIS cute...",
-		"4":"Don't try this at home!",
-		"5":"Home sweet home...",
-		"6":"Buy somethin', will ya?"
-	}
-}
-        
-        
-$(document).ready(function() {
-	$('#features_carousel').on('slid.bs.carousel', function () {
-  	var cmpv = $("#features_carousel .active").attr("data-slide-no");
-  	if (_CAROUSEL["features"][cmpv]) {
-  		$("#features_text").text(_CAROUSEL["features"][cmpv]);
-  	}
-	})
-	
-	$('#screenshots_carousel').on('slid.bs.carousel', function () {
-  	var cmpv = $("#screenshots_carousel .active").attr("data-slide-no");
-  	if (_CAROUSEL["screenshots"][cmpv]) {
-  		$("#screenshots_text").text(_CAROUSEL["screenshots"][cmpv]);
-  	}
-	})
-	
-	$("#features_carousel").carousel({
-		interval: 10000
-	});
-	$("#screenshots_carousel").carousel({
-		interval: 10000
-	});
-	/*
-	$(".carousel").on("slid", function() {
-		var to_slide;
-		to_slide = $(".carousel-item.active").attr("data-slide-no");
-		$(".myCarousel-target.active").removeClass("active");
-		$(".carousel-indicators [data-slide-to=" + to_slide + "]").addClass("active");
-	});
-	
-	$(".myCarousel-target").on("click", function() {
-		$(this).preventDefault();
-		$(".carousel").carousel(parseInt($(this).attr("data-slide-to")));
-		$(".myCarousel-target.active").removeClass("active");
-		$(this).addClass("active");
-	});*/
-});
+                $(".myCarousel-target").on("click", function() {
+                    $(this).preventDefault();
+                    $(".carousel").carousel(parseInt($(this).attr("data-slide-to")));
+                    $(".myCarousel-target.active").removeClass("active");
+                    $(this).addClass("active");
+                });*/
+            });
         </script>
 	</head>
 	
@@ -88,14 +80,16 @@ $(document).ready(function() {
                             <div id="main_logo" >
                                 <img src="images/main_logo_animated.gif" />    
                             </div>
-                            <div id="main_billboard" >
+                            <div id="main_billboard">
                                 <img id="main_slider_bg_img" src="images/main_slider_bg.png" />
                                 <form id="test_flight_form">
-                                    <button type="submit" style="border: 0; background: transparent"/> <img id="testflight_logo" src="images/test_flight_logo.png" alt="submit" /></button>
+                                    <button type="submit" style="border: 0; background: transparent">
+                                    <img id="testflight_logo" src="images/test_flight_logo.png" alt="submit" />
+                                    </button>
                                     <input placeholder="Test Flight Email" type="text" name="email">
                                 </form>
                                 <div id="vid">
-                                  <iframe src="//www.youtube.com/watch?v=Mq624wwa_GE?rel=0" frameborder="0" allowfullscreen></iframe>
+                                  <iframe src="//www.youtube.com/embed/Mq624wwa_GE" frameborder="0" allowfullscreen></iframe>
                                 </div>
                                 <a href="//www.apple.com"><img id="app_store_logo" src="images/app_store_logo.png" /></a>
                             </div>
@@ -140,14 +134,6 @@ $(document).ready(function() {
 					            <a class="carousel-control left" href="#features_carousel" data-slide="prev">‹</a>
 					            <a class="carousel-control right" href="#features_carousel" data-slide="next">›</a>
 					          	</div>
-
-					          <!--
-					          <ol class="carousel-indicators">
-					            <li data-target="#carousel" data-slide-to="0" class="myCarousel-target active"></li>
-					            <li data-target="#carousel" data-slide-to="1" class="myCarousel-target"></li>
-					            <li data-target="#carousel" data-slide-to="2" class="myCarousel-target"></li>
-					          </ol>
-								-->
 							</div>
 				      	</div>
 				    </div>
