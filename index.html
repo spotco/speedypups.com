@@ -13,23 +13,69 @@
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         
         <script type="text/javascript">
-	        $(document).ready(function() {
-			  $(".carousel").carousel({
-			    interval: 20000
-			  });
-			  $(".carousel").on("slid", function() {
-			    var to_slide;
-			    to_slide = $(".carousel-item.active").attr("data-slide-no");
-			    $(".myCarousel-target.active").removeClass("active");
-			    $(".carousel-indicators [data-slide-to=" + to_slide + "]").addClass("active");
-			  });
-			  $(".myCarousel-target").on("click", function() {
-			    $(this).preventDefault();
-			    $(".carousel").carousel(parseInt($(this).attr("data-slide-to")));
-			    $(".myCarousel-target.active").removeClass("active");
-			    $(this).addClass("active");
-			  });
-			});
+
+
+
+
+
+
+
+var _CAROUSEL = {
+	"features":{
+		"1":"Frantic, fun and fast platform-y goodness!",
+		"2":"Run, jump and dash your way through dozens of levels and three gorgeously animated worlds!",
+		"3":"Multiple different unlockable characters with special powers!",
+		"4":"Battle devious bosses!",
+		"5":"Like Flappy Birds? More like Flappy Pups!",
+		"6":"Need a little more DIFFICULTY in your life? Try the CHALLENGE mode! "
+	},
+	"screenshots":{
+		"1":"Things aren't gonna end well for our little pup here...",
+		"2":"Gotta go fast!",
+		"3":"Gravity's not a problem when you're THIS cute...",
+		"4":"Don't try this at home!",
+		"5":"Home sweet home...",
+		"6":"Buy somethin', will ya?"
+	}
+}
+        
+        
+$(document).ready(function() {
+	$('#features_carousel').on('slid.bs.carousel', function () {
+  	var cmpv = $("#features_carousel .active").attr("data-slide-no");
+  	if (_CAROUSEL["features"][cmpv]) {
+  		$("#features_text").text(_CAROUSEL["features"][cmpv]);
+  	}
+	})
+	
+	$('#screenshots_carousel').on('slid.bs.carousel', function () {
+  	var cmpv = $("#screenshots_carousel .active").attr("data-slide-no");
+  	if (_CAROUSEL["screenshots"][cmpv]) {
+  		$("#screenshots_text").text(_CAROUSEL["screenshots"][cmpv]);
+  	}
+	})
+	
+	$("#features_carousel").carousel({
+		interval: 10000
+	});
+	$("#screenshots_carousel").carousel({
+		interval: 10000
+	});
+	/*
+	$(".carousel").on("slid", function() {
+		var to_slide;
+		to_slide = $(".carousel-item.active").attr("data-slide-no");
+		$(".myCarousel-target.active").removeClass("active");
+		$(".carousel-indicators [data-slide-to=" + to_slide + "]").addClass("active");
+	});
+	
+	$(".myCarousel-target").on("click", function() {
+		$(this).preventDefault();
+		$(".carousel").carousel(parseInt($(this).attr("data-slide-to")));
+		$(".myCarousel-target.active").removeClass("active");
+		$(this).addClass("active");
+	});*/
+});
         </script>
 	</head>
 	
@@ -49,7 +95,7 @@
                                     <input placeholder="Test Flight Email" type="text" name="email">
                                 </form>
                                 <div id="vid">
-                                  <iframe src="//www.youtube.com/embed/sd4bqmP_460?rel=0" frameborder="0" allowfullscreen></iframe>
+                                  <iframe src="//www.youtube.com/watch?v=Mq624wwa_GE?rel=0" frameborder="0" allowfullscreen></iframe>
                                 </div>
                                 <a href="//www.apple.com"><img id="app_store_logo" src="images/app_store_logo.png" /></a>
                             </div>
@@ -71,15 +117,24 @@
 
 						            <!-- Carousel items -->
 						            <div class="carousel-inner">
-						              	<div data-slide-no="0" class="item carousel-item active">
-						                	<img src="http://lorempixel.com/575/300/animals" alt="">
+						              	<div data-slide-no="1" class="item carousel-item active">
+						                	<img src="carousel/fe_1.png" alt="">
 						              	</div>
-						              	<div data-slide-no="1" class="item carousel-item">
-						                	<img src="http://lorempixel.com/575/300/food" alt="">
-						             	</div>
 						              	<div data-slide-no="2" class="item carousel-item">
-						                	<img src="http://lorempixel.com/575/300/cats" alt="">
+						                	<img src="carousel/fe_2.png" alt="">
+						             		</div>
+						              	<div data-slide-no="3" class="item carousel-item">
+						                	<img src="carousel/fe_3.png" alt="">
 						              	</div>
+						              	<div data-slide-no="4" class="item carousel-item">
+						                	<img src="carousel/fe_4.png" alt="">
+						              	</div>
+						              	<div data-slide-no="5" class="item carousel-item">
+						                	<img src="carousel/fe_5.png" alt="">
+						              	</div>						       
+						              	<div data-slide-no="6" class="item carousel-item">
+						                	<img src="carousel/fe_6.png" alt="">
+						              	</div>       							
 						            </div>
 					            <!-- Carousel nav -->
 					            <a class="carousel-control left" href="#features_carousel" data-slide="prev">‹</a>
@@ -101,11 +156,7 @@
 						<h2>Features</h2>
 
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, mauris non suscipit blandit, 
-							nisl libero vulputate ipsum, ac fermentum elit orci sollicitudin purus. Proin malesuada dictum elit, 
-							at cursus tortor faucibus at. Morbi ornare suscipit sem, et ultrices diam laoreet sed. Nam adipiscing 
-							sollicitudin dolor. Donec et nisl mattis erat cursus commodo at in justo. Fusce varius, justo eget pretium tristique, 
-							tortor massa pharetra diam, et lacinia nisl mauris sed magna. Fusce dictum dapibus felis vel tincidunt.
+							<span id="features_text">Frantic, fun and fast platform-y goodness!</span>
                         
                         <img id="purple_pup" src="images/purple_pup.png">
                         <img id="three_prints" src="images/3_prints.png">
@@ -122,13 +173,11 @@
 				    		<h2>Screenshots</h2>
 
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, mauris non suscipit blandit, 
-								nisl libero vulputate ipsum, ac fermentum elit orci sollicitudin purus. Proin malesuada dictum elit, 
-								at cursus tortor faucibus at. Morbi ornare suscipit sem, et ultrices diam laoreet sed. Nam adipiscing 
-								sollicitudin dolor. Donec et nisl mattis erat cursus commodo at in justo. Fusce varius, justo eget pretium tristique, 
-								tortor massa pharetra diam, et lacinia nisl mauris sed magna. Fusce dictum dapibus felis vel tincidunt.
-                            <img id="two_prints" src="images/2_prints.png">
-                            <img id="happy_pup" src="images/happy_pup.png">
+								<span id="screenshots_text">
+								Things aren't gonna end well for our little pup here...
+								</span>
+                <img id="two_prints" src="images/2_prints.png">
+                <img id="happy_pup" src="images/happy_pup.png">
 							</p>
 					    </div>
 
@@ -137,23 +186,29 @@
                                 <img id="robot_pups" src="images/robot_pups.png">
                                 <img id="sleeping_pup" src="images/sleeping_pup.png">
 					    		<div class="carousel-container">
-						          	<div id="carousel" class="carousel slide carousel-fade">
+						          	<div id="screenshots_carousel" class="carousel slide carousel-fade">
 
 							            <!-- Carousel items -->
 							            <div class="carousel-inner">
-							              	<div data-slide-no="0" class="item carousel-item active">
-							                	<img src="http://lorempixel.com/575/300/animals" alt="">
-							              	</div>
-							              	<div data-slide-no="1" class="item carousel-item">
-							                	<img src="http://lorempixel.com/575/300/food" alt="">
-							             	</div>
-							              	<div data-slide-no="2" class="item carousel-item">
-							                	<img src="http://lorempixel.com/575/300/cats" alt="">
-							              	</div>
+							              <div data-slide-no="1" class="item carousel-item active">
+						                	<img src="carousel/ss_1.png" alt="">
+						              	</div>
+							              <div data-slide-no="2" class="item carousel-item">
+						                	<img src="carousel/ss_2.png" alt="">
+						              	</div>
+							              <div data-slide-no="3" class="item carousel-item">
+						                	<img src="carousel/ss_3.png" alt="">
+						              	</div>
+							              <div data-slide-no="4" class="item carousel-item">
+						                	<img src="carousel/ss_4.png" alt="">
+						              	</div>
+							              <div data-slide-no="5" class="item carousel-item">
+						                	<img src="carousel/ss_5.png" alt="">
+						              	</div>
 							            </div>
 						            <!-- Carousel nav -->
-						            <a class="carousel-control left" href="#carousel" data-slide="prev">‹</a>
-						            <a class="carousel-control right" href="#carousel" data-slide="next">›</a>
+						            <a class="carousel-control left" href="#screenshots_carousel" data-slide="prev">‹</a>
+						            <a class="carousel-control right" href="#screenshots_carousel" data-slide="next">›</a>
 						          	</div>
 
 						          <!--
@@ -198,19 +253,19 @@
 							</h3>
 
 							<p>
-								DEVELOPMENT AND DESIGN:<br />SHINY YANG
+								DEVELOPMENT AND DESIGN:<br />SPOTCO<br/>(<a href="http://www.spotcos.com">spotcos</a>)
 							</p>
 
 							<p>
-								ART AND DESIGN:<br />TOM CHANG
+								ART AND DESIGN:<br />Tom Chang
 							</p>
 
 							<p>
-								MUSIC:<br />DOGE
+								MUSIC:<br />Joshua Kaplan <br/>(<a href="http://www.openheartsound.com">OpenHeartSound</a>)
 							</p>
 
 							<p>
-								WEBSITE:<br />WENJIE SHI
+								WEBSITE:<br />Wenjie Shi
 							</p>
 						</div>
 					</div>
