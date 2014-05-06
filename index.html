@@ -37,6 +37,8 @@
                 var cmpv = $("#features_carousel .active").attr("data-slide-no");
                 if (_CAROUSEL["features"][cmpv]) {
                     $("#features_text").text(_CAROUSEL["features"][cmpv]);
+                    $("#features_text").fadeOut(0);
+                    $("#features_text").fadeIn();
                 }
                 })
 
@@ -44,6 +46,8 @@
                 var cmpv = $("#screenshots_carousel .active").attr("data-slide-no");
                 if (_CAROUSEL["screenshots"][cmpv]) {
                     $("#screenshots_text").text(_CAROUSEL["screenshots"][cmpv]);
+                    $("#screenshots_text").fadeOut(0);
+                    $("#screenshots_text").fadeIn();
                 }
                 })
 
