@@ -220,11 +220,11 @@ h1, h2, h3 {
 }
 
 .slider_background_tan {
-	background-image: url("images/slider_tan_bg.png");
+	background-image: url("images/slider_brown_bg.png");
 }
 
 .slider_background_brown {
-	background-image: url("images/slider_brown_bg.png");
+	background-image: url("images/slider_tan_bg.png");
 }
 
 .slider_background_tan, .slider_background_brown {
@@ -235,16 +235,24 @@ h1, h2, h3 {
 }
 
 .slider_background_tan:after, .slider_background_brown:after {
-    padding-top: 56.25%; /*16:9 ratio*/
+    padding-top: 54.97%; /*16:9 ratio*/
     display: block;
     content: '';
 }
 
-.carousel-container {
+.carousel-container_features {
 	position: absolute;
-	width: 85%;
-    padding-left: 15%;
-  	padding-top: 10%;
+	width: 60%;
+    margin-left: 28%;
+  	margin-top: 11%;
+}
+
+
+.carousel-container_screenshots {
+	position: absolute;
+	width: 63%;
+    margin-left: 16%;
+  	margin-top: 10%;
 }
 
 .carousel>.carousel-inner>.item>.circleElement {
