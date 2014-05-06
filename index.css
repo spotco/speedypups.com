@@ -95,10 +95,9 @@ h1, h2, h3 {
     bottom: 21%;
 }   
 
-#features {
-	padding-top: 80px;
-	padding-bottom: 80px;
-    overflow: hidden;
+#features, #screenshots {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 #features #rocket_pup {
@@ -132,46 +131,47 @@ h1, h2, h3 {
 }
 
 #screenshots {
-	padding-top: 80px;
-	padding-bottom: 90px;
 	background-image: url("images/dark_tan_bg.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: auto;
     position: relative;
     z-index: 500px;
-    overflow: hidden;
 }
 
-#screenshots #two_prints {
-    position: absolute;
-    top: -30px;
-    left: -30px;
+.screenshots_description_background {
+    background-image: url("images/screenshots_description_bg.png");
+    background-size: 100% 100%;
 }
 
-#screenshots #robot_pups {
-    position: absolute;
-    bottom: -35px;
-    right: -5px;
-    width: 22%;
-    height: 34%;
-    z-index: -500px;
+.features_description_background {
+    background-image: url("images/features_description_bg.png");
+    background-size: 100% 100%;
 }
 
-#screenshots #sleeping_pup {
-    position: absolute;
-    bottom: -10px;
-    left: -10px;
-    width: 16%;
-    height: 29%;
+.screenshots_description_background, .features_description_background {
+    width: 100%; /*whatever width you want*/
+    display: inline-block;
+    position: relative;
+}
+.screenshots_description_background:after, .features_description_background:after {
+    padding-top: 54.97%; /*16:9 ratio*/
+    display: block;
+    content: '';
 }
 
-#screenshots #happy_pup {
+#screenshots_description {
     position: absolute;
-    bottom: -65px;
-    right: 20px;
-    width: 80px;
-    height: 80px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+}
+
+#features_description {
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 10%;
 }
 
 #social {
@@ -324,28 +324,40 @@ h1, h2, h3 {
     }    
     
 #main_bg {
-	background-color: #d5b597;
-    background-image: none;
-}
-        
-#producers, #screenshots {
-    background-color: #f9e6d2;
-    background-image: none;
+	background-image: url("images/light_tan_bg.png");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -15px;
 }
     
-#screenshots #happy_pup {
-    position: absolute;
-    top: -50px;
-    right: 40px;
-    width: 80px;
-    height: 80px;
+#features, #screenshots {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-#features #purple_pup {
-    position: absolute;
-    bottom: -70px;
-    right: 30px;
-    width: 80px;
-    height: 80px;
+    
+#features {
+    padding-bottom: 75px;
+}
+    
+#screenshots {
+    background-image: url("images/dark_tan_bg.png");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+	height: auto;
+    position: relative;
+    z-index: 500px;
+}
+        
+#producers {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	background-image: url("images/dark_tan_half_bg.png");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+	height: auto;
 }
 
 }
