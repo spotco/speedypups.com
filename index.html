@@ -57,6 +57,7 @@
                 $("#screenshots_carousel").carousel({
                     interval: 10000
                 });
+                
                 /*
                 $(".carousel").on("slid", function() {
                     var to_slide;
@@ -70,7 +71,23 @@
                     $(".carousel").carousel(parseInt($(this).attr("data-slide-to")));
                     $(".myCarousel-target.active").removeClass("active");
                     $(this).addClass("active");
-                });*/
+                });
+                
+                $(function() {
+                    $('#myCarousel').carousel({interval: 2000});
+                    $('#myCarousel').on('slid', function() {
+                        var to_slide = $('.carousel-item.active').attr('data-slide-no');
+                        $('.myCarousel-target.active').removeClass('active');
+                        $('.carousel-indicators [data-slide-to=' + to_slide + ']').addClass('active');
+                    });
+                    $('.myCarousel-target').on('click', function() {
+                        $('#myCarousel').carousel(parseInt($(this).attr('data-slide-to')));
+                        $('.myCarousel-target.active').removeClass('active');
+                        $(this).addClass('active');
+                    });
+                });
+                
+                */
             });
         </script>
 	</head>
@@ -82,8 +99,9 @@
                     <div class="col-md-6 col-md-offset-3 text-center">
                         <div id="main_slider">
                             <div id="main_logo" >
-                                <img src="images/main_logo_animated.gif" />    
+                                <img src="images/main_logo_animated.gif" />   
                             </div>
+                            
                             <div id="main_billboard">
                                 <img id="main_slider_bg_img" src="images/main_slider_bg.png" />
                                 <form id="test_flight_form">
@@ -132,21 +150,18 @@
 						                	<img src="carousel/fe_6.png" alt="">
 						              	</div>       							
 						            </div>
-					            <!-- Carousel nav -->
-					            <a class="carousel-control left" href="#features_carousel" data-slide="prev">‹</a>
-					            <a class="carousel-control right" href="#features_carousel" data-slide="next">›</a>
 					          	</div>
 							</div>
 				      	</div>
 				    </div>
 
-					<div class="col-6-xs col-md-6">
+					<div class="col-6-xs col-md-6 text-center">
                         <div class="features_description_background">
                             <div id="features_description">
                                 <h2>Features</h2>
 
                                 <p>
-                                    <span id="features_text">Frantic, fun and fast platform-y goodness!</span>
+                                    <span id="features_text" class="brown_text">Frantic, fun and fast platform-y goodness!</span>
                                 </p>
                             </div>
                         </div>
@@ -158,16 +173,21 @@
 			<div id="screenshots">
 				<div class="container">
 				    <div class="row">
-				    	<div class="col-6-xs col-md-6">
+				    	<div class="col-6-xs col-md-6 text-center">
                             <div class="screenshots_description_background">
                                 <div id="screenshots_description">
                                     <h2>Screenshots</h2>
 
                                     <p>
-                                        <span id="screenshots_text">
+                                        <span id="screenshots_text" class="brown_text">
                                         Things aren't gonna end well for our little pup here...
                                         </span>
                                     </p>
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#screenshots_carousel" data-slide-to="0" class="myCarousel-target active"></li>
+                                            <li data-target="#screenshots_carousel" data-slide-to="1" class="myCarousel-target"></li>
+                                            <li data-target="#screenshots_carousel" data-slide-to="2" class="myCarousel-target"></li>
+                                        </ol>
                                 </div>
                             </div>
 					    </div>
@@ -195,18 +215,7 @@
 						                	<img src="carousel/ss_5.png" alt="">
 						              	</div>
 							            </div>
-						            <!-- Carousel nav -->
-						            <a class="carousel-control left" href="#screenshots_carousel" data-slide="prev">‹</a>
-						            <a class="carousel-control right" href="#screenshots_carousel" data-slide="next">›</a>
 						          	</div>
-
-						          <!--
-						          <ol class="carousel-indicators">
-						            <li data-target="#carousel" data-slide-to="0" class="myCarousel-target active"></li>
-						            <li data-target="#carousel" data-slide-to="1" class="myCarousel-target"></li>
-						            <li data-target="#carousel" data-slide-to="2" class="myCarousel-target"></li>
-						          </ol>
-									-->
 								</div>
 					      	</div>
 						</div>
@@ -219,9 +228,9 @@
 				<div class="container">
 				    <div class="row">
 				    	<div class="col-md-8 col-md-offset-2 text-center">
-				    		<img src="images/social_promo.png">
-
-				    		<h3>Follow Us On:</h3>
+				    <img id="promo_img" src="images/social_promo.png">
+                                
+				    		<h3><span class="brown_text">Follow Us On:</span></h3>
 
 				    		<div>
 				    			<a href="http://www.twitter.com"><img class="icon" src="images/twitter_icon.png" /></a>
@@ -238,11 +247,13 @@
 				    <div class="row">
 				    	<div class="col-md-10 col-md-offset-1 text-center">
 							<h3>
+                                <span class="brown_text">
 								Game Created<br />By:
+                                </span>
 							</h3>
 
 							<p>
-								DEVELOPMENT AND DESIGN:<br />SPOTCO<br/>(<a href="http://www.spotcos.com">spotcos</a>)
+								DEVELOPMENT AND DESIGN:<br /><a href="http://www.spotcos.com">SPOTCO<br/></a>
 							</p>
 
 							<p>
@@ -250,7 +261,7 @@
 							</p>
 
 							<p>
-								MUSIC:<br />Joshua Kaplan <br/>(<a href="http://www.openheartsound.com">OpenHeartSound</a>)
+								MUSIC:<br /><a href="http://www.openheartsound.com">Joshua Kaplan</a>
 							</p>
 
 							<p>

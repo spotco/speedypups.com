@@ -1,11 +1,16 @@
 body {
 	font-family: "Futura";
-	font-size: 20px;
+	font-size: 25px;
 	background-color: #d5b597;
 }
 
 h1, h2, h3 {
 	font-family: "Carton Six";
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
 }
 
 @font-face {
@@ -26,12 +31,13 @@ h1, h2, h3 {
        url('fonts/carton_six.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-#main_logo img {
-    width: 100%;
+.brown_text {
+    color: #452308; 
 }
 
-#main_billboard {
-    
+#main_logo img {
+    width: 100%;
+    padding-bottom: 50px;
 }
 
 #test_flight_form {
@@ -40,14 +46,14 @@ h1, h2, h3 {
     right: 12%;
     height: 22%;
     width: 50%;
-    bottom: 35.5%;
+    bottom: 33%;
 }
 
 #app_store_logo {
     position: absolute;
     left: 37.5%;
     width: 24%;
-    bottom: 6.25%;
+    bottom: 6%;
 }
 
 #test_flight_form input {
@@ -68,7 +74,9 @@ h1, h2, h3 {
 
 #main_bg {
 	background-image: url("images/light_tan_bg.png");
-	background-size: 100% 100%;
+    background-color: #f9e6d2;
+    background-position: center;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
     margin-top: -15px;
 }
@@ -92,7 +100,7 @@ h1, h2, h3 {
     right: 12%;
     width: 75%;
     height: 22%;
-    bottom: 21%;
+    bottom: 19%;
 }   
 
 #features, #screenshots {
@@ -100,39 +108,11 @@ h1, h2, h3 {
 	padding-bottom: 50px;
 }
 
-#features #rocket_pup {
-    left: -20px;
-    top: -30px;
-    width: 25%;
-    height: 30%;
-    position: absolute;
-}
-
-#features #rocket_pup_shadow {
-    left: -10px;
-    bottom: -10px;
-    width: 25%;
-    height: 5%;
-    position: absolute;
-}
-
-#features #purple_pup {
-    position: absolute;
-    bottom: -70px;
-    right: 10px;
-    width: 80px;
-    height: 80px;
-}
-
-#features #three_prints {
-    position: absolute;
-    top: -20px;
-    right: 10px;
-}
-
 #screenshots {
 	background-image: url("images/dark_tan_bg.png");
-	background-size: 100% 100%;
+    background-position: center;
+    background-color: #d5b597;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
 	height: auto;
     position: relative;
@@ -184,6 +164,12 @@ h1, h2, h3 {
 	width: 100%;
 }
 
+#social #promo_img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 #social .icon {
     width: 50px;
     height: 50px;
@@ -209,7 +195,9 @@ h1, h2, h3 {
 	padding-top: 30px;
 	padding-bottom: 10px;
 	background-image: url("images/dark_tan_half_bg.png");
-	background-size: 100% 100%;
+    background-position: center;
+    background-color: #d5b597;
+	background-size: 1920px 100%;
 	background-repeat: no-repeat;
 	height: auto;
 }
@@ -266,8 +254,7 @@ h1, h2, h3 {
     opacity: .5;
 }
 .carousel-indicators {
-    top: 35px;
-    background: #404549;
+    top: 100%;
     padding: 30px;
     border-radius: 10px;
 }
@@ -359,5 +346,15 @@ h1, h2, h3 {
     background-position: center;
 	height: auto;
 }
+}
+@media (min-width: 1200px) {
+      .container {
+        width: 1200px;
+      }
+}
 
+@media (min-width: 1600px) {
+      .container {
+        width: 1600px;
+      }
 }
