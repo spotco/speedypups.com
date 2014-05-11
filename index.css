@@ -1,6 +1,6 @@
 body {
 	font-family: "Futura";
-	font-size: 25px;
+	font-size: 30px;
 	background-color: #d5b597;
 }
 
@@ -248,44 +248,28 @@ h3 {
     margin-left: 16%;
   	margin-top: 10%;
 }
-
-.carousel>.carousel-inner>.item>.circleElement {
-    background-color: #000;
-    border-radius: 50%;
-    position: absolute;
-    top: 11%;
-    left: 39%;
-    width: 400px;
-    height: 400px;
-    opacity: .5;
-}
 #features .carousel-indicators {
-    top: 60%;
+    bottom: 20%;
     left: 13%;
 }
 #screenshots .carousel-indicators {
-    top: 60%;
-    left: 55%;
+    bottom: 20%;
 }
 /* Not active */
 .carousel-indicators li {
     background: url(images/btn-off.png) no-repeat;
-    background-size: 100% 100%;
     width: 26px;
     height: 25px;
     cursor: pointer;
-    text-align:center;
     border: none;
     
 }
 /* Active */
 .carousel-indicators .active {
     background: url(images/btn-on.png) no-repeat;
-    background-size: 100% 100%;
     cursor: pointer;
     width: 26px;
     height: 25px;
-    text-align:center;
     border: none;
 }
 .carousel-fade .carousel-inner .item {
@@ -364,15 +348,31 @@ z-index: 2
     background-position: center;
 	height: auto;
 }
+    
+#features .carousel-indicators {
+    bottom: -18%;
+    left: 23%;
+}
+#screenshots .carousel-indicators {
+    bottom: 0%;
+}
 }
 @media (min-width: 1200px) {
       .container {
         width: 1200px;
       }
+    #features .carousel-indicators {
+    bottom: 20%;
+    left: 17%;
+    }
 }
 
 @media (min-width: 1600px) {
       .container {
         width: 1600px;
       }
+    #features .carousel-indicators {
+    bottom: 20%;
+    left: 13%;
+}
 }
