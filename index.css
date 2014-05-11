@@ -357,9 +357,17 @@ h1, h2, h3 {
 h3 {
     font-size: 25px;
 }
-    .carousel-indicators {
+.carousel-indicators {
     padding: 0px;
-        bottom: -0%;
+    bottom: -10%;
+}
+    
+.screenshots_description_background {
+    padding-bottom: 50px;
+}
+
+.features_description_background {
+    padding-bottom: 50px;
 }
 }
 @media (min-width: 1200px) {
