@@ -37,7 +37,7 @@ h3 {
 
 #main_logo img {
     width: 100%;
-    padding-bottom: 50px;
+    margin-bottom: 5%;
 }
 
 #test_flight_form {
@@ -46,7 +46,7 @@ h3 {
     right: 12%;
     height: 22%;
     width: 50%;
-    bottom: 33%;
+    bottom: 33.5%;
 }
 
 #app_store_logo {
@@ -62,6 +62,7 @@ h3 {
     width: 90%;
     height: 16%;
     right: -28%;
+    font-size: 80%;
 }
 
 #testflight_logo {
@@ -100,7 +101,7 @@ h3 {
     right: 12%;
     width: 75%;
     height: 22%;
-    bottom: 19%;
+    bottom: 19.5%;
 }   
 
 #features, #screenshots {
@@ -254,9 +255,7 @@ h3 {
     opacity: .5;
 }
 .carousel-indicators {
-    top: 100%;
-    padding: 30px;
-    border-radius: 10px;
+    bottom: 40%;
 }
 .carousel-indicators li { cursor: pointer }
 .carousel-control {

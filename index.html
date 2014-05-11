@@ -22,12 +22,12 @@
                     "6":"Need a little more DIFFICULTY in your life? Try the CHALLENGE mode! "
                 },
                 "screenshots":{
-                    "1":"Things aren't gonna end well for our little pup here...",
-                    "2":"Gotta go fast!",
-                    "3":"Gravity's not a problem when you're THIS cute...",
-                    "4":"Don't try this at home!",
-                    "5":"Home sweet home...",     
-                    "6":"Buy somethin', will ya?"
+                    "0":"Things aren't gonna end well for our little pup here...",
+                    "1":"Gotta go fast!",
+                    "2":"Gravity's not a problem when you're THIS cute...",
+                    "3":"Don't try this at home!",
+                    "4":"Home sweet home...",     
+                    "5":"Buy somethin', will ya?"
                 }
             }
 
@@ -37,58 +37,41 @@
                 var cmpv = $("#features_carousel .active").attr("data-slide-no");
                 if (_CAROUSEL["features"][cmpv]) {
                     $("#features_text").text(_CAROUSEL["features"][cmpv]);
-                    $("#features_text").fadeOut(0);
-                    $("#features_text").fadeIn();
+                    
+                        $('.features-carousel-target.active').removeClass('active');
+                        $('#features_carousel_indicators [data-slide-to=' + cmpv + ']').addClass('active');
                 }
                 })
 
                 $('#screenshots_carousel').on('slid.bs.carousel', function () {
                 var cmpv = $("#screenshots_carousel .active").attr("data-slide-no");
-                if (_CAROUSEL["screenshots"][cmpv]) {
-                    $("#screenshots_text").text(_CAROUSEL["screenshots"][cmpv]);
-                    $("#screenshots_text").fadeOut(0);
-                    $("#screenshots_text").fadeIn();
-                }
+                    if (_CAROUSEL["screenshots"][cmpv]) {
+                        $("#screenshots_text").text(_CAROUSEL["screenshots"][cmpv]);
+
+                        $('.screenshots-carousel-target.active').removeClass('active');
+                        $('#screenshots_carousel_indicators [data-slide-to=' + cmpv + ']').addClass('active');
+                    }
                 })
-
-                $("#features_carousel").carousel({
-                    interval: 10000
-                });
-                $("#screenshots_carousel").carousel({
-                    interval: 10000
-                });
                 
-                /*
-                $(".carousel").on("slid", function() {
-                    var to_slide;
-                    to_slide = $(".carousel-item.active").attr("data-slide-no");
-                    $(".myCarousel-target.active").removeClass("active");
-                    $(".carousel-indicators [data-slide-to=" + to_slide + "]").addClass("active");
-                });
-
-                $(".myCarousel-target").on("click", function() {
+                $('#features_carousel').carousel({interval: 5000});
+                $('#screenshots_carousel').carousel({interval: 5000});
+                
+                $('.features-carousel-target').on('click', function() {
                     $(this).preventDefault();
-                    $(".carousel").carousel(parseInt($(this).attr("data-slide-to")));
-                    $(".myCarousel-target.active").removeClass("active");
+                    $("#features_carousel").carousel(parseInt($(this).attr("data-slide-to")));
+                    $(".features-carousel-target.active").removeClass("active");
                     $(this).addClass("active");
                 });
                 
-                $(function() {
-                    $('#myCarousel').carousel({interval: 2000});
-                    $('#myCarousel').on('slid', function() {
-                        var to_slide = $('.carousel-item.active').attr('data-slide-no');
-                        $('.myCarousel-target.active').removeClass('active');
-                        $('.carousel-indicators [data-slide-to=' + to_slide + ']').addClass('active');
-                    });
-                    $('.myCarousel-target').on('click', function() {
-                        $('#myCarousel').carousel(parseInt($(this).attr('data-slide-to')));
-                        $('.myCarousel-target.active').removeClass('active');
-                        $(this).addClass('active');
-                    });
+                $('.screenshots-carousel-target').on('click', function() {
+                    $(this).preventDefault();
+                    $("#screenshots_carousel").carousel(parseInt($(this).attr("data-slide-to")));
+                    $(".screenshots-carousel-target.active").removeClass("active");
+                    $(this).addClass("active");
                 });
-                
-                */
             });
+            
+
         </script>
 	</head>
 	
@@ -131,23 +114,23 @@
 
 						            <!-- Carousel items -->
 						            <div class="carousel-inner">
-						              	<div data-slide-no="1" class="item carousel-item active">
-						                	<img src="carousel/fe_1.png" alt="">
+						              	<div data-slide-no="0" class="item carousel-item active">
+						                	<img src="carousel/fe_0.png" alt="">
 						              	</div>
+						              	<div data-slide-no="1" class="item carousel-item">
+						                	<img src="carousel/fe_1.png" alt="">
+						             		</div>
 						              	<div data-slide-no="2" class="item carousel-item">
 						                	<img src="carousel/fe_2.png" alt="">
-						             		</div>
+						              	</div>
 						              	<div data-slide-no="3" class="item carousel-item">
 						                	<img src="carousel/fe_3.png" alt="">
 						              	</div>
 						              	<div data-slide-no="4" class="item carousel-item">
 						                	<img src="carousel/fe_4.png" alt="">
-						              	</div>
+						              	</div>						       
 						              	<div data-slide-no="5" class="item carousel-item">
 						                	<img src="carousel/fe_5.png" alt="">
-						              	</div>						       
-						              	<div data-slide-no="6" class="item carousel-item">
-						                	<img src="carousel/fe_6.png" alt="">
 						              	</div>       							
 						            </div>
 					          	</div>
@@ -164,6 +147,14 @@
                                     <span id="features_text" class="brown_text">Frantic, fun and fast platform-y goodness!</span>
                                 </p>
                             </div>
+                            <ol id="features_carousel_indicators" class="carousel-indicators">
+                                <li data-target="#features_carousel" data-slide-to="0" class="features-carousel-target active"></li>
+                                <li data-target="#features_carousel" data-slide-to="1" class="features-carousel-target"></li>
+                                <li data-target="#features_carousel" data-slide-to="2" class="features-carousel-target"></li>
+                                <li data-target="#features_carousel" data-slide-to="3" class="features-carousel-target"></li>
+                                <li data-target="#features_carousel" data-slide-to="4" class="features-carousel-target"></li>
+                                <li data-target="#features_carousel" data-slide-to="5" class="features-carousel-target"></li>
+                            </ol>
                         </div>
 					</div>
 
@@ -183,12 +174,14 @@
                                         Things aren't gonna end well for our little pup here...
                                         </span>
                                     </p>
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#screenshots_carousel" data-slide-to="0" class="myCarousel-target active"></li>
-                                            <li data-target="#screenshots_carousel" data-slide-to="1" class="myCarousel-target"></li>
-                                            <li data-target="#screenshots_carousel" data-slide-to="2" class="myCarousel-target"></li>
-                                        </ol>
                                 </div>
+                                    <ol id="screenshots_carousel_indicators" class="carousel-indicators">
+                                    <li data-target="#screenshots_carousel" data-slide-to="0" class="screenshots-carousel-target active"></li>
+                                    <li data-target="#screenshots_carousel" data-slide-to="1" class="screenshots-carousel-target"></li>
+                                    <li data-target="#screenshots_carousel" data-slide-to="2" class="screenshots-carousel-target"></li>
+                                    <li data-target="#screenshots_carousel" data-slide-to="3" class="screenshots-carousel-target"></li>
+                                    <li data-target="#screenshots_carousel" data-slide-to="4" class="screenshots-carousel-target"></li>
+                                    </ol>
                             </div>
 					    </div>
 
@@ -199,7 +192,10 @@
 
 							            <!-- Carousel items -->
 							            <div class="carousel-inner">
-							              <div data-slide-no="1" class="item carousel-item active">
+							              <div data-slide-no="0" class="item carousel-item active">
+						                	<img src="carousel/ss_0.png" alt="">
+						              	</div>
+							              <div data-slide-no="1" class="item carousel-item">
 						                	<img src="carousel/ss_1.png" alt="">
 						              	</div>
 							              <div data-slide-no="2" class="item carousel-item">
@@ -210,9 +206,6 @@
 						              	</div>
 							              <div data-slide-no="4" class="item carousel-item">
 						                	<img src="carousel/ss_4.png" alt="">
-						              	</div>
-							              <div data-slide-no="5" class="item carousel-item">
-						                	<img src="carousel/ss_5.png" alt="">
 						              	</div>
 							            </div>
 						          	</div>
