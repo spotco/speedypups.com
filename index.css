@@ -248,12 +248,8 @@ h3 {
     margin-left: 16%;
   	margin-top: 10%;
 }
-#features .carousel-indicators {
-    bottom: 20%;
-    left: 13%;
-}
-#screenshots .carousel-indicators {
-    bottom: 20%;
+.carousel-indicators {
+    padding: 0px;
 }
 /* Not active */
 .carousel-indicators li {
@@ -262,7 +258,6 @@ h3 {
     height: 25px;
     cursor: pointer;
     border: none;
-    
 }
 /* Active */
 .carousel-indicators .active {
@@ -348,31 +343,33 @@ z-index: 2
     background-position: center;
 	height: auto;
 }
-    
-#features .carousel-indicators {
-    bottom: -18%;
-    left: 23%;
+    body {
+	font-family: "Futura";
+	font-size: 20px;
+	background-color: #d5b597;
 }
-#screenshots .carousel-indicators {
-    bottom: 0%;
+
+h1, h2, h3 {
+	font-family: "Carton Six";
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+}
+    .carousel-indicators {
+    padding: 0px;
+        bottom: -0%;
 }
 }
 @media (min-width: 1200px) {
       .container {
         width: 1200px;
       }
-    #features .carousel-indicators {
-    bottom: 20%;
-    left: 17%;
-    }
 }
 
 @media (min-width: 1600px) {
       .container {
         width: 1600px;
       }
-    #features .carousel-indicators {
-    bottom: 20%;
-    left: 13%;
-}
 }
