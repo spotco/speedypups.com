@@ -51,13 +51,6 @@ h3 {
     bottom: 37%;
 }
 
-#app_store_logo {
-    position: absolute;
-    left: 37.5%;
-    width: 24%;
-    bottom: 6.5%;
-}
-
 #test_flight_form input {
     position: absolute;
     top: 5.5%;
@@ -76,17 +69,11 @@ h3 {
 }
 
 #main_bg {
-	background-image: url("images/light_tan_bg.png");
     background-color: #f9e6d2;
     background-position: center;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
     margin-top: -15px;
-}
-
-#main_slider_section {
-	background: url("images/top_bg.png") bottom repeat-x;
-    padding-bottom: 215px;
 }
 
 #main_slider_bg_img {
@@ -97,22 +84,12 @@ h3 {
     position: relative;
 }
 
-#vid iframe {
-    position: absolute;
-    left: 12%;
-    right: 12%;
-    width: 75%;
-    height: 22%;
-    bottom: 21%;
-}   
-
 #features, #screenshots {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #screenshots {
-	background-image: url("images/dark_tan_bg.png");
     background-position: center;
     background-color: #d5b597;
 	background-size: auto 100%;
@@ -200,7 +177,6 @@ h3 {
 #producers {
 	padding-top: 30px;
 	padding-bottom: 10px;
-	background-image: url("images/dark_tan_half_bg.png");
     background-position: center;
     background-color: #d5b597;
 	background-size: 1920px 100%;
@@ -289,7 +265,7 @@ background: none;
 z-index: 2
 }
 
-@media only screen and (max-width:767px) { 
+@media only screen and (max-width:550px) { 
     h1 { font-size: 30px !important }
     .carousel-caption {
         padding: 15px;
@@ -308,7 +284,6 @@ z-index: 2
     }    
     
 #main_bg {
-	background-image: url("images/light_tan_bg.png");
 	background-size: auto 100%;
 	background-repeat: no-repeat;
     background-position: center;
@@ -325,7 +300,6 @@ z-index: 2
 }
     
 #screenshots {
-    background-image: url("images/dark_tan_bg.png");
 	background-size: auto 100%;
 	background-repeat: no-repeat;
     background-position: center;
@@ -335,15 +309,14 @@ z-index: 2
 }
         
 #producers {
-	padding-top: 30px;
 	padding-bottom: 10px;
-	background-image: url("images/dark_tan_half_bg.png");
 	background-size: auto 100%;
 	background-repeat: no-repeat;
     background-position: center;
 	height: auto;
 }
-    body {
+
+body {
 	font-family: "Futura";
 	font-size: 20px;
 	background-color: #d5b597;
