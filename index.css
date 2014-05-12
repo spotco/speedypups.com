@@ -83,12 +83,6 @@ h3 {
 #main_slider {
     position: relative;
 }
-
-#features, #screenshots {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
 #screenshots {
     background-position: center;
     background-color: #d5b597;
@@ -99,26 +93,12 @@ h3 {
     z-index: 500px;
 }
 
-.screenshots_description_background {
-    background-image: url("images/screenshots_description_bg.png");
-    background-size: 100% 100%;
-}
-
-.features_description_background {
-    background-image: url("images/features_description_bg.png");
-    background-size: 100% 100%;
-}
-
 .screenshots_description_background, .features_description_background {
     width: 100%; /*whatever width you want*/
     display: inline-block;
     position: relative;
 }
-.screenshots_description_background:after, .features_description_background:after {
-    padding-top: 54.97%; /*16:9 ratio*/
-    display: block;
-    content: '';
-}
+
 
 #screenshots_description {
     position: absolute;
@@ -210,13 +190,6 @@ h3 {
     content: '';
 }
 
-.carousel-container_features {
-	position: absolute;
-	width: 60%;
-    margin-left: 28%;
-  	margin-top: 11%;
-}
-
 
 .carousel-container_screenshots {
 	position: absolute;
@@ -224,24 +197,23 @@ h3 {
     margin-left: 16%;
   	margin-top: 10%;
 }
-.carousel-indicators {
-    padding: 0px;
-}
 /* Not active */
 .carousel-indicators li {
     background: url(images/btn-off.png) no-repeat;
-    width: 26px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     cursor: pointer;
     border: none;
+    margin: 0;
 }
 /* Active */
 .carousel-indicators .active {
     background: url(images/btn-on.png) no-repeat;
     cursor: pointer;
-    width: 26px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     border: none;
+    margin: 0;
 }
 .carousel-fade .carousel-inner .item {
     opacity: 0;
@@ -263,40 +235,13 @@ h3 {
 { 
 background: none;
 z-index: 2
-}
-
-@media only screen and (max-width:550px) { 
-    h1 { font-size: 30px !important }
-    .carousel-caption {
-        padding: 15px;
-        text-align: center;
-    }
-    .carousel-caption h4 { font-size: 30px }
-    .carousel-caption p {
-        margin-top: 10px;
-        font-size: 10px;
-        margin-bottom: -10px;
-    }
-    body { padding: 0 !important }
-    .carousel { margin-bottom: 0 }
-    .hero-unit { padding-bottom: 60px }
-    .hero-unit p { font-size: 16px 
-    }    
+} 
     
 #main_bg {
 	background-size: auto 100%;
 	background-repeat: no-repeat;
     background-position: center;
     margin-top: -15px;
-}
-    
-#features, #screenshots {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-    
-#features {
-    padding-bottom: 75px;
 }
     
 #screenshots {
@@ -330,14 +275,6 @@ h1, h2, h3 {
 h3 {
     font-size: 25px;
 }
-#features .carousel-indicators {
-    padding: 0px;
-    bottom: -25%;
-}
-#features .carousel-indicators {
-    padding: 0px;
-    bottom: -22%;
-}
 .screenshots_description_background {
     padding-bottom: 50px;
 }
@@ -345,15 +282,4 @@ h3 {
 .features_description_background {
     padding-bottom: 50px;
 }
-}
-@media (min-width: 1200px) {
-      .container {
-        width: 1200px;
-      }
-}
-
-@media (min-width: 1600px) {
-      .container {
-        width: 1600px;
-      }
 }
