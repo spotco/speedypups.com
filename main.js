@@ -27,7 +27,8 @@ function load_carousel(name) {
             }).append(
 
                 $("<a>").attr({
-                    href:_CAROUSEL[name][i+""][1]
+                    href:_CAROUSEL[name][i+""][1],
+                    target:"_blank"
                 }).append(
                     $("<img>").attr({
                         "src":_CAROUSEL[name][i+""][1]
@@ -45,6 +46,13 @@ function load_carousel(name) {
 }
 
 $(document).ready(function() {
+
+    $("#header_close").click(function(){
+        $("#header").remove()
+        $("#border_0").remove()
+    })
+
+    clouds()
 
     load_carousel("features");
     load_carousel("screenshots");
@@ -86,4 +94,63 @@ $(document).ready(function() {
 
     rescale();
 });
-            
+        
+var _clouds = []
+var _spawn_ct = 0
+//120-600
+function clouds() {
+    
+
+    //setInterval(cloud_update,100)
+
+    var wid = $(window).width()
+    var i = Math.random()*100
+    while (i < wid + 50) {
+        spawn_cloud(i)
+        i+= Math.random()*100+60
+    }
+    cloud_update()
+
+}
+
+function cloud_update(){
+        _spawn_ct--;
+        if (_spawn_ct <= 0 && _clouds.length < 15) {
+            _spawn_ct= Math.random()*100+2000;
+            var wid = $(window).width()
+            spawn_cloud(wid+150)
+        }
+
+        for (var i = _clouds.length-1; i >= 0; i--) {
+            var obj = _clouds[i]
+
+            obj.x -= obj.vx * 1
+
+            obj.obj[0].style.left = obj.x+"px"
+            //obj.obj.css({left:Math.floor(obj.x)+"px"})
+
+            if (obj.x < -150) {
+                obj.obj.remove()
+                _clouds.splice(i,1)
+            }
+        }
+
+    }
+
+function spawn_cloud(start_x) {
+    var height = Math.random()*560+140
+    var neu = {
+        x: start_x,
+        obj: $("<img>").css({
+            position:"absolute",
+            left: "-999px",
+            bottom: height+"px",
+            width: 60+(250*(1-height/600))+"px"
+        }).attr({
+            src:"minimages/cloud.png"
+        }),
+        vx:(1-height/600)*0.4
+    }
+    _clouds.push(neu)
+    $("#clouds").append(neu.obj)
+}

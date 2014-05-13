@@ -87,6 +87,12 @@
     margin-left:-25px;
 }
 
+@-moz-document url-prefix() {
+    #features_rocketdog {
+        margin-left:-850px;
+    }
+}
+
 /**text**/
 #features_carousel_indicators {
     position: relative;
