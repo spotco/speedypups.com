@@ -105,7 +105,7 @@ function clouds() {
 
     var wid = $(window).width()
     var i = Math.random()*100
-    while (i < wid + 50) {
+    while (i < wid - 100) {
         spawn_cloud(i)
         i+= Math.random()*100+60
     }

@@ -30,6 +30,12 @@ body {
 	font-size: 25px;
 	background-color: #d5b597;
     overflow-x:hidden;
+    width: 100%;
+    max-width: 100%;
+}
+html, body {
+    overflow-x: hidden !important;
+    position: relative !important;
 }
 
 h1, h2, h3 {
