@@ -1,0 +1,19 @@
+#border_1 {
+    background: url("minimages/border_light_top.png") bottom repeat-x;
+    height:68px;
+}
+
+#border_2 {
+    background: url("minimages/border_dark_top.png") bottom repeat-x;
+    height:68px;
+}
+
+#border_3 {
+    background: url("minimages/border_dark_bottom.png") bottom repeat-x;
+    height:59px;
+}
+
+#border_4 {
+    background: url("minimages/border_dark_top.png") bottom repeat-x;
+    height:68px;
+}

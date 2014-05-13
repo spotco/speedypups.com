@@ -1,0 +1,113 @@
+#screenshots_carousel .carousel-item img {
+    background-color: #fff;
+    padding: 3px;
+    border:1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.carousel-container_screenshots {
+    position: absolute;
+    width: 76%;
+    left:60px;
+    top:30px;
+}
+
+@media (min-width: 850px) {
+    #screenshots_carousel_img_section {
+        width: 500px;
+        float:left;
+        margin: auto;
+
+        position: relative;
+        left:335px;
+    }
+    #screenshots_carousel_text_section {
+        width: 300px;
+        float:left;
+        margin-left:35px;
+
+        position: relative;
+        left:-520px;
+    }
+    #screenshots_center {
+        margin: auto;
+        display: table;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    #screenshots .carousel-indicators {
+        position: auto;
+        left:0;
+        right: 0;
+        margin: auto;
+    }
+    #screenshots_robots {
+        position: absolute;
+        margin-left: 430px;
+        margin-top: 75px;
+        z-index: 0;
+    }
+    #screenshots_sleepdog {
+        position: absolute;
+        margin-left: -80px;
+        margin-top: 220px;
+        z-index: 100;
+    }
+    #screenshots_sleeppug {
+        position: absolute;
+        margin-left: 0px;
+        margin-top: 190px;
+        z-index: 99;
+    }
+}
+@media (max-width: 849px) {
+    #screenshots_carousel_img_section {
+        width: 90%!important;
+        margin: auto!important;
+    }
+    #screenshots_carousel_text_section {
+        width: 80%!important;
+        margin: auto!important;
+    }
+    #screenshots_carousel_text_section {
+        text-align: center;
+        height:210px;
+    }
+    .carousel-indicators {
+        width:100%;
+        left: 0;
+        position: absolute;
+        margin-left: 0;
+    }
+    #screenshots_robots {
+        display: none;   
+    }
+    #screenshots_sleepdog {
+        display: none;
+    }
+    #screenshots_sleeppug {
+        display: none;
+    }
+}
+
+#screenshots_paw {
+    position: absolute;
+    z-index: 10;
+    margin-left: -40px;
+    margin-top: -5px;
+}
+
+
+/**text**/
+#screenshots_carousel_indicators {
+    position: relative;
+    top: 70px;
+}
+#screenshots_description > h2 {
+    margin-top: 15px;
+}
+#screenshots_text {
+    font-size:  20px;
+}
+#screenshots_description > p {
+    width: 100%;
+}

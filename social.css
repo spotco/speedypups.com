@@ -1,0 +1,12 @@
+#social {
+    text-align: center;
+    width: 470px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+@media (max-width: 470px) {
+    #social {
+        width: 95%!important;
+    }
+}

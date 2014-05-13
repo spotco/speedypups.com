@@ -11,230 +11,18 @@
         <script src="jquery.min.js" type="text/javascript"> </script>
         <script src="bootstrap.min.js"></script>
         
-        <script type="text/javascript">
-            var _CAROUSEL = {
-                "features":{
-                    "0":"Frantic, fun and fast platform-y goodness!",
-                    "1":"Run, jump and dash your way through dozens of levels and three gorgeously animated worlds!",
-                    "2":"Multiple different unlockable characters with special powers!",
-                    "3":"Battle devious bosses!",
-                    "4":"Like Flappy Birds? More like Flappy Pups!",
-                    "5":"Need a little more DIFFICULTY in your life? Try the CHALLENGE mode! "
-                },
-                "screenshots":{
-                    "0":"Things aren't gonna end well for our little pup here...",
-                    "1":"Gotta go fast!",
-                    "2":"Gravity's not a problem when you're THIS cute...",
-                    "3":"Don't try this at home!",
-                    "4":"Home sweet home...",     
-                    "5":"Buy somethin', will ya?"
-                }
-            }
-
-
-            $(document).ready(function() {
-
-                $('#features_carousel').on('slid.bs.carousel', function () {
-                var cmpv = $("#features_carousel .active").attr("data-slide-no");
-                if (_CAROUSEL["features"][cmpv]) {
-                    $("#features_text").text(_CAROUSEL["features"][cmpv]);
-                    
-                    $('.features-carousel-target.active').removeClass('active');
-                    $('#features_carousel_indicators [data-slide-to=' + cmpv + ']').addClass('active');
-                }
-                })
-
-                $('#screenshots_carousel').on('slid.bs.carousel', function () {
-                var cmpv = $("#screenshots_carousel .active").attr("data-slide-no");
-                    if (_CAROUSEL["screenshots"][cmpv]) {
-                        $("#screenshots_text").text(_CAROUSEL["screenshots"][cmpv]);
-
-                        $('.screenshots-carousel-target.active').removeClass('active');
-                        $('#screenshots_carousel_indicators [data-slide-to=' + cmpv + ']').addClass('active');
-                    }
-                })
-                
-                $('#features_carousel').carousel({interval: 10000});
-                $('#screenshots_carousel').carousel({interval: 10000});
-                
-                $('.features-carousel-target').on('click', function() {
-                    $(this).preventDefault();
-                    $("#features_carousel").carousel(parseInt($(this).attr("data-slide-to")));
-                    $(".features-carousel-target.active").removeClass("active");
-                    $(this).addClass("active");
-                });
-                
-                $('.screenshots-carousel-target').on('click', function() {
-                    $(this).preventDefault();
-                    $("#screenshots_carousel").carousel(parseInt($(this).attr("data-slide-to")));
-                    $(".screenshots-carousel-target.active").removeClass("active");
-                    $(this).addClass("active");
-                });
-
-                rescale();
-            });
-            
-
-        </script>
+        <script src="main.js" type="text/javascript"></script>
+        <link href="border.css" rel="stylesheet" type="text/css">
 	</head>
 	
 	<body>
-<style>
-#main_logo {
-    width:80%;
-    position: absolute;
-    left:0;
-    right:0;
-    margin: auto;
-}
 
-#logo_sign {
-    position: relative;
-    bottom: -320px;
-    z-index: 1;
-    width:550px;
-    margin:auto;
-    margin-top:300px;
-}
-@media only screen and (max-width: 550px) {
-    #logo_sign {
-        width: 100%!important;
-    }
-    #vid {
-        width:95%!important;
-    }
-    #vid iframe {
-        width: 95%!important;
-    }
-}
-
-
-#vid {
-    width: 500px;
-    position:absolute;
-    top: 150px;
-    left:0;
-    right:0;
-    margin:auto;
-}
-
-#vid iframe {
-    width: 500px;
-    height: 225px;
-    background-color: #444444;
-    border:3px solid rgba(1,1,1,0.3);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-
-#main_slider_section {
-    background: url("minimages/sky_bg.png");
-    padding-bottom: 0px;
-    background-size: contain;
-    margin-top: -320px;
-    overflow: hidden;
-}
-#main_slider_fg {
-    position:relative;
-    background: url("minimages/fg_repeat.png") bottom repeat-x;
-    height:306px;
-    width:100%;
-    bottom:0px;
-}
-#main_slider_bg {
-    position: relative;
-    background: url("minimages/bg_repeat.png") bottom repeat-x;
-    height:224px;
-    width:100%;
-    bottom:-50px;
-}
-#sign_top {
-    position: absolute;
-    display:block;
-    width:220px;
-    margin:auto;
-    left:0;
-    right:0;
-    top: 30px;
-    z-index: -1;
-}
-#sign_top > img {
-    z-index: -1;
-    width:220px;
-    height: 100px;
-}
-#sign_top > a {
-    position: relative;
-    bottom: 85px;
-    margin: 10px;
-}
-
-#submit_form {
-    position: absolute;
-    top: 300px;
-    width:60%;
-    margin:auto;
-    left:0;
-    right:0;
-}
-#submit_form > img {
-    position: absolute;
-    width:100%;
-    height:80px;
-}
-#submit_form > input {
-    opacity: 0.8;
-    width: 75%;
-    z-index: 5;
-    position: absolute;
-    top: 29px;
-    left: 15px;
-    font-size:16pt;
-}
-#submit_form > span {
-    position: absolute;
-    z-index: 6;
-    font-size: 12pt;
-    top:10px;
-    left:15px;
-}
-#submit_form > button {
-    z-index: 7;
-    position: absolute;
-    height:45px;
-    right:10px;
-    top: 17.5px;
-}
-</style>
-<script type="text/javascript">
-$(window).resize(function(){rescale()});
-
-function rescale() {
-    var wid = $(window).width()
-    var scf = 1
-
-    if (wid < 550) {
-        scf = (1-(550-wid)/550)
-    }
-
-    $("#logo_sign").css({"margin-top":(150+scf*200)+"px"})
-    $("#sign_top").css({width:scf*220+"px", height:scf*100+"px", top: scf*-75 + "px"})
-    $("#sign_top > img").css({width:scf*220+"px", height:scf*100+"px"})
-    $("#sign_top > a > img").css({width:scf*200+"px",height:scf*59+"px"})
-    $("#sign_top > a").css({bottom:scf*85+"px", margin:(6+scf*4)+"px"})
-    $("#main_logo").css({top:-(150+scf*200)+"px", width: Math.min(100,(80 + (1-scf)*60))+"%"})
-    $("#vid").css({top:(40*scf)+"px", "padding-left":((1-scf)*30)+"px"})
-    $("#vid > iframe").css({height:(225*scf)+"px"})
-    $("#submit_form").css({top:(300*scf)+"px"})
-    $("#submit_form > input").css({width:(50+25*scf)+"%"})
-
-    rescale_features()
-}
-</script>
+<link href="top.css" type="text/css" rel="stylesheet"/>
+<script src="top.js" type="text/javascript"></script>
 
         <div id="main_slider_section">
             <div id="logo_sign">
-                <img id="main_logo" src="images/main_logo_animated.gif" />   
+                <img id="main_logo" src="minimages/logo.gif" />   
 
                 <div id="sign_top">
                     <img src="minimages/sign_top.png"/>
@@ -262,142 +50,41 @@ function rescale() {
         
 		<div id="main_bg">
 
-<style>
-#border_1 {
-    background: url("minimages/border_light_top.png") bottom repeat-x;
-    height:68px;
-}
-#features_carousel .carousel-item img {
-    background-color: #fff;
-    padding: 3px;
-    border:1px solid rgba(0,0,0,0.2);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-.carousel-container_features {
-    position: absolute;
-    width: 75%;
-    left:60px;
-    top:30px;
-}
-.content:before, .content:after {
-    width: 1000px;
-    padding-top:55%;
-    display: table;
-}
+<link href="features.css" type="text/css" rel="stylesheet"/>
+<script src="features.js" type="text/javascript"></script>
 
-@media (min-width: 850px) {
-    #features_carousel_img_section {
-        width: 500px;
-        float:left;
-        margin: auto;
-    }
-    #features_carousel_text_section {
-        width: 300px;
-        float:left;
-        margin-left:35px;
-    }
-    #features_center {
-        overflow:hidden;
-        margin: auto;
-        display: table;
-    }
-    .carousel-indicators {
-        width:auto;
-        left:0;
-        margin-left: 0;
-    }
-}
-@media (max-width: 849px) {
-    #features_carousel_img_section {
-        width: 90%!important;
-        margin: auto!important;
-    }
-    #features_carousel_text_section {
-        width: 80%!important;
-        margin: auto!important;
-    }
-    #features_carousel_text_section {
-        text-align: center;
-        height:250px;
-    }
-    .carousel-indicators {
-        width:100%;
-        left: 0;
-        position: absolute;
-        margin-left: 0;
-    }
-}
-
-</style>
-<script>
-function rescale_features() {
-    var wid = $(window).width()+15
-    var scf = 1
-    if (wid < 850) {
-        scf = (1-(850-wid)/850)
-
-        $(".carousel-container_features").css({left:(90*scf)+"px", top:(40*scf)+"px"})
-    } else {
-        $(".carousel-container_features").css({left:60+"px", top:(30)+"px"})
-    }    
-    $("#features_carousel_indicators").css({top:(220+scf)+"px"})
-    $("#features_carousel_text_section").css({height:(190+scf*60)+"px"})
-}
-</script>
             <div id="border_1"></div>
 
 			 <div id="features" class="content">
 			    <div id="features_center">
-			    	<div id="features_carousel_img_section">
+			    	<img src="minimages/rocketdog.png" id="features_rocketdog" />
+
+                    <div id="features_carousel_img_section">
 			    		<div class="slider_background_tan">
 				    		<div class="carousel-container_features">
 					          	<div id="features_carousel" class="carousel slide carousel-fade">
-
-						            <!-- Carousel items -->
 						            <div class="carousel-inner">
-						              	<div data-slide-no="0" class="item carousel-item active">
+						              	<!--
+                                        <div data-slide-no="0" class="item carousel-item active">
 						                	<img src="carousel/fe_0.png" alt="">
 						              	</div>
-						              	<div data-slide-no="1" class="item carousel-item">
-						                	<img src="carousel/fe_1.png" alt="">
-						             		</div>
-						              	<div data-slide-no="2" class="item carousel-item">
-						                	<img src="carousel/fe_2.png" alt="">
-						              	</div>
-						              	<div data-slide-no="3" class="item carousel-item">
-						                	<img src="carousel/fe_3.png" alt="">
-						              	</div>
-						              	<div data-slide-no="4" class="item carousel-item">
-						                	<img src="carousel/fe_4.png" alt="">
-						              	</div>						       
-						              	<div data-slide-no="5" class="item carousel-item">
-						                	<img src="carousel/fe_5.png" alt="">
-						              	</div>       							
+                                        -->    							
 						            </div>
 					          	</div>
 							</div>
 				      	</div>
 				    </div>
-
-<style>
-#features_carousel_indicators {
-    position: relative;
-    top:175px;
-}
-#features_description > h2 {
-    margin-top: 15px;
-}
-#features_text {
-    font-size:  20px;
-}
-#features_description > p {
-    width: 100%;
-}
-</style>
-
-					<div id="features_carousel_text_section">
+					
+                    <div id="features_carousel_text_section">
+                        <img src="minimages/husky.png" id="features_husky" />
+                        <img src="minimages/pawsright.png" id="features_paw" />
                         <div class="features_description_background">
                             <div id="features_description">
+                                <h2>Features</h2>
+                                <p>
+                                    <span id="features_text" class="brown_text">Frantic, fun and fast platform-y goodness!</span>
+                                </p>
+
                                 <div id="features_carousel_indicators">
                                     <ol class="carousel-indicators">
                                         <li data-target="#features_carousel" data-slide-to="0" class="features-carousel-target active"></li>
@@ -408,10 +95,7 @@ function rescale_features() {
                                         <li data-target="#features_carousel" data-slide-to="5" class="features-carousel-target"></li>
                                     </ol>
                                 </div>
-                                <h2>Features</h2>
-                                <p>
-                                    <span id="features_text" class="brown_text">Frantic, fun and fast platform-y goodness!</span>
-                                </p>
+
                             </div>
                         </div>
 					</div>
@@ -419,102 +103,80 @@ function rescale_features() {
 			    </div>
 			</div>
 
-<style>
-#border_2 {
-    background: url("minimages/border_dark_top.png") bottom repeat-x;
-    height:68px;
-}
-</style>
+<link href="screenshots.css" type="text/css" rel="stylesheet"/>
+<script src="screenshots.js" type="text/javascript"></script>
+
             <div id="border_2"></div>
 
-			<div id="screenshots">
-				<div class="container">
-				    <div class="row">
-				    	<div class="col-6-xs col-md-6 text-center">
-                            <div class="screenshots_description_background">
-                                <div id="screenshots_description">
-                                    <h2>Screenshots</h2>
+			<div id="screenshots" class="content">
+				<div id="screenshots_center">
 
-                                    <p>
-                                        <span id="screenshots_text" class="brown_text">
-                                        Things aren't gonna end well for our little pup here...
-                                        </span>
-                                    </p>
+                    <div id="screenshots_carousel_img_section">
+                        <img src="minimages/robots.png" id="screenshots_robots" />
+                        <img src="minimages/sleepdog.png" id="screenshots_sleepdog" />
+                        <img src="minimages/sleeppug.png" id="screenshots_sleeppug" />
+                        <div class="slider_background_brown">
+                            <div class="carousel-container_screenshots">
+                                <div id="screenshots_carousel" class="carousel slide carousel-fade">
+                                    <div class="carousel-inner">
+                                        <!--
+                                        <div data-slide-no="0" class="item carousel-item active">
+                                            <img src="carousel/ss_0.png" alt="">
+                                        </div>
+                                        -->
+                                    </div>
                                 </div>
-                                    <ol id="screenshots_carousel_indicators" class="carousel-indicators">
-                                    <li data-target="#screenshots_carousel" data-slide-to="0" class="screenshots-carousel-target active"></li>
-                                    <li data-target="#screenshots_carousel" data-slide-to="1" class="screenshots-carousel-target"></li>
-                                    <li data-target="#screenshots_carousel" data-slide-to="2" class="screenshots-carousel-target"></li>
-                                    <li data-target="#screenshots_carousel" data-slide-to="3" class="screenshots-carousel-target"></li>
-                                    <li data-target="#screenshots_carousel" data-slide-to="4" class="screenshots-carousel-target"></li>
-                                    </ol>
                             </div>
-					    </div>
+                        </div>
+                    </div>
 
-						<div class="col-6-xs col-md-6">
-				    		<div class="slider_background_brown">
-					    		<div class="carousel-container_screenshots">
-						          	<div id="screenshots_carousel" class="carousel slide carousel-fade">
+			    	<div id="screenshots_carousel_text_section">
+                        <img src="minimages/pawsleft.png" id="screenshots_paw" />
+                        <div class="screenshots_description_background">
+                            <div id="screenshots_description">
+                                <h2>Screenshots</h2>
 
-							            <!-- Carousel items -->
-							            <div class="carousel-inner">
-							              <div data-slide-no="0" class="item carousel-item active">
-						                	<img src="carousel/ss_0.png" alt="">
-						              	   </div>
-							              <div data-slide-no="1" class="item carousel-item">
-						                	<img src="carousel/ss_1.png" alt="">
-						              	   </div>
-							              <div data-slide-no="2" class="item carousel-item">
-						                	<img src="carousel/ss_2.png" alt="">
-						              	</div>
-							              <div data-slide-no="3" class="item carousel-item">
-						                	<img src="carousel/ss_3.png" alt="">
-						              	</div>
-							              <div data-slide-no="4" class="item carousel-item">
-						                	<img src="carousel/ss_4.png" alt="">
-						              	</div>
-							            </div>
-						          	</div>
-								</div>
-					      	</div>
-						</div>
+                                <p>
+                                    <span id="screenshots_text" class="brown_text">
+                                    Things aren't gonna end well for our little pup here...
+                                    </span>
+                                </p>
 
+                                <div id="screenshots_carousel_indicators">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#screenshots_carousel" data-slide-to="0" class="screenshots-carousel-target active"></li>
+                                        <li data-target="#screenshots_carousel" data-slide-to="1" class="screenshots-carousel-target"></li>
+                                        <li data-target="#screenshots_carousel" data-slide-to="2" class="screenshots-carousel-target"></li>
+                                        <li data-target="#screenshots_carousel" data-slide-to="3" class="screenshots-carousel-target"></li>
+                                        <li data-target="#screenshots_carousel" data-slide-to="4" class="screenshots-carousel-target"></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
 				    </div>
+
 			    </div>
 			</div>
 
-<style>
-#border_3 {
-    background: url("minimages/border_dark_bottom.png") bottom repeat-x;
-    height:59px;
-}
-</style>
+<link href="social.css" type="text/css" rel="stylesheet"/>
             <div id="border_3"></div>
 
 			<div id="social">
-				<div class="container">
-				    <div class="row">
-				    	<div class="col-md-8 col-md-offset-2 text-center">
-                            <img id="promo_img" src="images/social_promo.png">
-                                
-				    		<h3><span class="brown_text">Follow Us On:</span></h3>
+			    <div class="row">
+			    	<div id="social">
+                        <img id="promo_img" src="images/social_promo.png">
+                            
+			    		<h3><span class="brown_text">Follow Us On:</span></h3>
 
-				    		<div>
-				    			<a href="http://www.twitter.com"><img class="icon" src="images/twitter_icon.png" /></a>
-				    			<a href="http://www.facebook.com"><img class="icon" src="images/facebook_icon.png" /></a>
-				    			<a href="http://www.youtube.com"><img class="icon" src="images/youtube_icon.png"></a>
-				    		</div>
-				    	</div>
-				    </div>
-				</div>
+			    		<div>
+			    			<a href="http://www.twitter.com/spotco"><img class="icon" src="images/twitter_icon.png" /></a>
+			    			<a href="http://www.facebook.com/spotcox"><img class="icon" src="images/facebook_icon.png" /></a>
+			    			<a href="http://www.youtube.com/spotco1"><img class="icon" src="images/youtube_icon.png"></a>
+			    		</div>
+			    	</div>
+			    </div>
 			</div>
 
-<style>
-#border_4 {
-    background: url("minimages/border_dark_top.png") bottom repeat-x;
-    height:68px;
-}
-</style>
             <div id="border_4"></div>
 
 			<div id="producers">
@@ -523,9 +185,9 @@ function rescale_features() {
 				    	<div class="col-md-10 col-md-offset-1 text-center">
 							<h3><span class="brown_text">Game Created<br />By:</span></h3>
 							<p>DEVELOPMENT AND DESIGN:<br /><a href="http://www.spotcos.com">SPOTCO<br/></a></p>
-							<p>ART AND DESIGN:<br />Tom Chang</p>
+							<p>ART AND DESIGN:<br /><a href="http://cargocollective.com/tchangdesign">Tom Chang</a></p>
 							<p>MUSIC:<br /><a href="http://www.openheartsound.com">Joshua Kaplan</a></p>
-							<p>WEBSITE:<br />Wenjie Shi</p>
+							<p>WEBSITE:<br /><a href="https://github.com/BluBambu">Wenjie Shi &amp; SPOTCO</a></p>
 						</div>
 					</div>
 				</div>

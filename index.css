@@ -102,21 +102,17 @@ h3 {
 
 #screenshots_description {
     position: absolute;
-    width: 90%;
+    width: 100%;
     top: 10%;
     right: 0;
+    text-align:center;
 }
 
 #features_description {
     position: absolute;
-    width: 90%;
+    width: 100%;
     top: 10%;
     left: 0;
-}
-
-#social {
-	padding-top: 50px;
-	padding-bottom: 0px;
 }
 
 #social img {
@@ -125,9 +121,7 @@ h3 {
 }
 
 #social #promo_img {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
 }
 
 #social .icon {
@@ -142,20 +136,22 @@ h3 {
 #social a img {
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
+  transition: all 0.1s;
 }
     
 #social a:hover img {
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 #social a:active img {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
+    transform: scale(1);
 }
 
 #producers {
-	padding-top: 30px;
 	padding-bottom: 10px;
     background-position: center;
     background-color: #d5b597;
@@ -190,30 +186,25 @@ h3 {
     content: '';
 }
 
-
-.carousel-container_screenshots {
-	position: absolute;
-	width: 63%;
-    margin-left: 16%;
-  	margin-top: 10%;
-}
 /* Not active */
 .carousel-indicators li {
-    background: url(images/btn-off.png) no-repeat;
-    width: 27px;
-    height: 27px;
+    background: url(images/btn-off.png);
+    width: 23px;
+    height: 23px;
     cursor: pointer;
     border: none;
     margin: 0;
+    background-size: cover;
 }
 /* Active */
 .carousel-indicators .active {
-    background: url(images/btn-on.png) no-repeat;
+    background: url(images/btn-on.png);
     cursor: pointer;
-    width: 27px;
-    height: 27px;
+    width: 23px;
+    height: 23px;
     border: none;
     margin: 0;
+    background-size: cover;
 }
 .carousel-fade .carousel-inner .item {
     opacity: 0;
@@ -244,15 +235,6 @@ z-index: 2
     margin-top: -15px;
 }
     
-#screenshots {
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-    background-position: center;
-	height: auto;
-    position: relative;
-    z-index: 500px;
-}
-        
 #producers {
 	padding-bottom: 10px;
 	background-size: auto 100%;
@@ -282,4 +264,9 @@ h3 {
 .features_description_background {
     padding-bottom: 50px;
 }
+
+#promo_img {
+    margin-bottom: 30px;
+}
+
 }

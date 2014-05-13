@@ -1,0 +1,103 @@
+#features_carousel .carousel-item img {
+    background-color: #fff;
+    padding: 3px;
+    border:1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.carousel-container_features {
+    position: absolute;
+    width: 75%;
+}
+.content:before, .content:after {
+    width: 1000px;
+    padding-top:55%;
+    display: table;
+}
+
+@media (min-width: 850px) {
+    #features_carousel_img_section {
+        width: 500px;
+        float:left;
+        margin: auto;
+    }
+    #features_carousel_text_section {
+        width: 300px;
+        float:left;
+        margin-left: 15px;
+    }
+    #features_center {
+        margin: auto;
+        display: table;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .carousel-indicators {
+        width:auto;
+        left:0;
+        margin-left: 0;
+    }
+    #features_husky {
+        position: absolute;
+        margin-left: 215px!important;
+        margin-top: 140px!important;
+    }
+
+    #features_paw {
+        position: absolute;
+        margin-left: 215px!important;
+    }
+}
+@media (max-width: 849px) {
+    #features_carousel_img_section {
+        width: 90%!important;
+        margin: auto!important;
+    }
+    #features_carousel_text_section {
+        width: 80%!important;
+        margin: auto!important;
+    }
+    #features_carousel_text_section {
+        text-align: center;
+        height:250px;
+    }
+    .carousel-indicators {
+        width:100%;
+        left: 0;
+        position: absolute;
+        margin-left: 0;
+    }
+    #features_rocketdog {
+        margin-left: 0!important;
+    }
+
+    #features_husky {
+        display: none;
+    }
+
+    #features_paw {
+        position: absolute;
+        width: 90px;
+    }
+}
+
+#features_rocketdog {
+    position: absolute;
+    z-index: 10;
+    width: 140px;
+    margin-left:-25px;
+}
+
+/**text**/
+#features_carousel_indicators {
+    position: relative;
+    top: 70px;
+}
+#features_description > h2 {
+    margin-top: 15px;
+}
+#features_text {
+    font-size:  20px;
+}
+#features_description > p {
+    width: 100%;
+}
