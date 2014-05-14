@@ -22,6 +22,7 @@
 #border_3 {
     background: url("minimages/border_dark_bottom.png") bottom repeat-x;
     height:32px;
+    margin-top: -1px;   
 }
 
 #border_4 {

@@ -5,6 +5,10 @@
     margin-top: 15px;
 }
 
+#social_icon_container {
+	padding-bottom: 9px;
+}
+
 @media (max-width: 470px) {
     #soc {
         width: 95%!important;
