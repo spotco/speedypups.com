@@ -1,4 +1,4 @@
-#social {
+#soc {
     text-align: center;
     width: 470px;
     margin: auto;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 470px) {
-    #social {
+    #soc {
         width: 95%!important;
     }
 }
