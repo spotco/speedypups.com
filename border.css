@@ -1,6 +1,6 @@
 #border_0 {
     background: url("minimages/border_light_header.png") bottom repeat-x;
-    height:15px;
+    height:32px;
     position: relative;
     margin-bottom: 40px;
     z-index: 9;
@@ -9,22 +9,22 @@
 
 #border_1 {
     background: url("minimages/border_light_top.png") bottom repeat-x;
-    height:20px;
+    height:32px;
     position: relative;
     z-index: 99;
 }
 
 #border_2 {
     background: url("minimages/border_dark_top.png") bottom repeat-x;
-    height:20px;
+    height:48px;
 }
 
 #border_3 {
     background: url("minimages/border_dark_bottom.png") bottom repeat-x;
-    height:20px;
+    height:32px;
 }
 
 #border_4 {
     background: url("minimages/border_dark_top.png") bottom repeat-x;
-    height:20px;
+    height:32px;
 }
