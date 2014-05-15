@@ -55,7 +55,6 @@
     #screenshots_sleeppug {
         position: absolute;
         margin-left: -2px;
-        margin-top: 187px;
         z-index: 99;
     }
     #screenshots {
@@ -83,17 +82,22 @@
         margin-left: 0;
     }
     #screenshots_robots {
-        display: none;   
+        position: absolute;
+        z-index: 0;
+        right:0;
     }
     #screenshots_sleepdog {
         display: none;
     }
+    
     #screenshots_sleeppug {
-        display: none;
+        position: absolute;
+        z-index: 99;
     }
     #screenshots_paw {
-        margin-left: -40px!important;
-        margin-top: -5px!important;
+        /*margin-left: -40px!important;
+        margin-top: -5px!important;*/
+        display: none;
     }
 }
 

@@ -87,6 +87,9 @@
     #features {
         margin-top:40px;
     }
+    #features_description > h2 {
+        margin-top:26px!important;
+    }
 }
 
 #features_rocketdog {

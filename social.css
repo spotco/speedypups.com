@@ -14,3 +14,17 @@
         width: 95%!important;
     }
 }
+
+#beta_test {
+	font-family: "Carton Six";
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+form > div {
+	margin-top: 10px;
+}
+
+form {
+	margin-bottom: 25px;
+}

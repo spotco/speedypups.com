@@ -9,6 +9,8 @@ function rescale_features() {
     } else {
         $(".carousel-container_features").css({left:60+"px", top:(24)+"px"})
     }
-    $("#features_rocketdog").css({width:(60+scf*80)+"px"}) 
+    $("#features_rocketdog").css({width:(30+scf*110)+"px"}) 
     $("#features_carousel_text_section").css({height:(190+scf*60)+"px"})
+
+    $("#features_description > h2").css({"font-size":(31+20*scf)})
 }
