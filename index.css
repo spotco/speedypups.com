@@ -149,17 +149,17 @@ h3 {
     left: 0;
 }
 
-#social img {
+#innersoc img {
 	text-align: center;
 	width: 100%;
 }
 
-#social #promo_img {
+#innersoc #promo_img {
     width: 100%;
     padding-top: 35px;
 }
 
-#social .icon {
+#innersoc .icon {
     width: 80px;
     height: 80px;
     margin-left: 25px;
@@ -168,19 +168,19 @@ h3 {
     display: inline-block;    
 }
 
-#social a img {
+#innersoc a img {
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   transition: all 0.1s;
 }
     
-#social a:hover img {
+#innersoc a:hover img {
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     transform: scale(1.5);
 }
 
-#social a:active img {
+#innersoc a:active img {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1);
