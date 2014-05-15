@@ -19,8 +19,8 @@
 	</head>
 
 	<body>
+        <!--
         <div id="header">
-            <!--<a id="header_close">&times;</a>-->
             <form action="submit.php">
                 Want to be a beta tester? Sign up for the Testflight with your iOS device!
                 <div>
@@ -29,10 +29,9 @@
                 </div>
             </form>
 
-
         </div>
         <div id="border_0"></div>
-
+        -->
 
 <link href="top.css" type="text/css" rel="stylesheet"/>
 <script src="top.js" type="text/javascript"></script>
@@ -42,8 +41,9 @@
                 <img id="main_logo" src="minimages/logo.gif" />   
 
                 <div id="sign_top">
-                    <img src="minimages/sign_top.png"/>
-                    <a href="http://www.apple.com"><img id="app_store_logo" src="minimages/ios_logo.png" /></a>
+                    <img src="minimages/sign_top.png" id="sign_top_pane"/>
+                    <!--<a href="http://www.apple.com"><img id="app_store_logo" src="minimages/ios_logo.png" /></a>-->
+                    <a href="#beta_test"><img src="images/test_flight_logo.png"/></a>
                 </div>
 
                 <div id="vid">
@@ -184,6 +184,21 @@
 			    			<a href="http://www.facebook.com/spotcox"><img class="icon" src="images/facebook_icon.png" /></a>
 			    			<a href="http://www.youtube.com/spotco1"><img class="icon" src="images/youtube_icon.png"></a>
 			    		</div>
+
+                        <br/>
+                        <br/>
+
+                        <form action="submit.php" id="beta_test">
+                            Want to be a beta tester? Sign up for the Testflight with your iOS device!
+                            <div>
+                                <input placeholder="Your email here!" type="text" name="email">
+                                <button type="submit">Submit!</button>
+                            </div>
+                        </form>
+
+                        <br/>
+                        <br/>
+
 			    	</div>
 			    </div>
 			</div>
