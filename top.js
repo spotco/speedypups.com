@@ -9,11 +9,14 @@ function rescale() {
     }
 
     $("#logo_sign").css({"margin-top":(150+scf*200)+"px"})
-    $("#sign_top").css({width:scf*220+"px", height:scf*100+"px", top: scf*-75 + "px"})
-    $("#sign_top_pane").css({width:scf*220+"px", height:scf*100+"px"})
+    $("#sign_top").css({width:scf*420+"px", height:scf*100+"px", top: scf*-75 + "px"})
+    $("#sign_top_pane1").css({width:scf*220+"px", height:scf*100+"px"})
+    $("#sign_top_pane2").css({width:scf*220+"px", height:scf*100+"px", top:scf*-160+"px", left:scf*220+"px"})
 
     //app store logo
-    $("#sign_top > a > img").css({width:scf*200+"px",height:scf*59+"px"})
+    $("#iosimg").css({width:scf*200+"px",height:scf*59+"px"})
+    $("#androidimg").css({width:scf*200+"px",height:scf*59+"px", top:scf*-245+"px", left:scf*220+"px"})
+    $("#iosimg > img, #androidimg > img").css({width:scf*200+"px"})
     
     $("#sign_top > a").css({bottom:scf*85+"px", margin:(6+scf*4)+"px"})
     $("#main_logo").css({top:-(136+scf*200)+"px", width: Math.min(100,(78 + (1-scf)*60))+"%"})
