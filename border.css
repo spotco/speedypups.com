@@ -1,14 +1,50 @@
 #border_0 {
-    background: url("minimages/border_light_header.png") bottom repeat-x;
+    background: url("minimages/border_dark_top2.png") bottom repeat-x;
     height:32px;
     position: relative;
-    margin-bottom: 40px;
     z-index: 9;
     margin-top: -1px;
 }
 
+#infosection {
+    background-position: center;
+    background-color: #d5b597;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+#quotesection {
+    background-position: center;
+    background-color: #d5b597;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
 #border_1 {
-    background: url("minimages/border_light_top.png") bottom repeat-x;
+    background: url("minimages/border_dark_bottom.png") bottom repeat-x;
+    height:32px;
+    position: relative;
+    z-index: 99;
+}
+
+#border_1_5 {
+    background: url("minimages/border_dark_top.png") bottom repeat-x;
+    height:32px;
+    position: relative;
+    z-index: 99;
+}
+#border_1_5_bottom {
+    background: url("minimages/border_dark_bottom.png") bottom repeat-x;
     height:32px;
     position: relative;
     z-index: 99;
